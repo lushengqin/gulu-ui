@@ -7,7 +7,7 @@
     |
     <router-link to="/">Frank</router-link>
     |
-    <router-link to='./Frank2'>Frank2</router-link>
+    <router-link to='./Doc'>Frank2</router-link>
   </div>
   <hr/>
   <router-view/>
