@@ -1,6 +1,6 @@
 <template>
   <div class="topnav">
-    <div class="logo">LOGO</div>
+    <div class="logo" @click="toggleMenu">LOGO</div>
     <ul class="menu">
       <li>菜单1</li>
       <li>菜单2</li>
@@ -8,8 +8,19 @@
   </div>
 </template>
 
-<script>
-export default {};
+<script lang="ts">
+import { inject, Ref } from "vue";
+export default {
+  name: "Topnav",
+  setup() {
+    const assideVisible = inject<Ref<boolean>>("xxx");
+    console.log("topnav 里面获取到的为" + assideVisible.value);
+    const toggleMenu = () => {
+      assideVisible.value = !assideVisible.value;
+    };
+    return { toggleMenu };
+  },
+};
 </script>
 
 <style lang="scss" scoped>
