@@ -13,6 +13,9 @@ export const router = createRouter({
             path: '/doc', component: Doc,
             children: [
                 {
+                    path:'',component:Button //默认页面写空 显示button内容
+                },
+                {
                     path: '/button', component: ButtonDemo
                 },
                 {
