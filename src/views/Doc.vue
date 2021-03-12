@@ -6,7 +6,7 @@
         <h2>组件列表</h2>
         <ol>
           <li>
-            <router-link to="./doc/button">组件1</router-link>
+            <router-link to="./doc/Switch">组件1</router-link>
           </li>
           <li>
             <router-link to="./doc/button2">组件2</router-link>
