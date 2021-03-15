@@ -1,5 +1,5 @@
 <template>
-  <button class="gulu-button" :class="classes" :disabled>
+  <button class="gulu-button" :class="classes" :disabled="disabled">
     <slot></slot>
   </button>
 </template>
