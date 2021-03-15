@@ -1,5 +1,5 @@
 <template>
-  <button class="gulu-button" :class="classes">
+  <button class="gulu-button" :class="classes" :disabled>
     <slot></slot>
   </button>
 </template>
@@ -17,8 +17,12 @@ export default {
       default: "normal",
     },
     level: {
-      typeof: String,
+      type: String,
       default: "normal",
+    },
+    disabled: {
+      type: Boolean,
+      default: false,
     },
   },
   setup(props) {
@@ -41,6 +45,7 @@ $color: #333;
 $blue: #40a9ff;
 $radius: 4px;
 $red: red;
+$grey: grey;
 .gulu-button {
   box-sizing: border-box;
   height: $h;
@@ -134,6 +139,22 @@ $red: red;
       &:focus {
         color: darken($red, 10%);
       }
+    }
+  }
+  &.gulu-theme-button {
+    &[disabled] {
+      cursor: not-allowed;
+      color: $grey;
+      &:hover {
+        border-color: $grey;
+      }
+    }
+  }
+  &.gulu-theme-link,
+  &.gulu-theme-text {
+    &[disabled] {
+      cursor: not-allowed;
+      color: $grey;
     }
   }
 }
