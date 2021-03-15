@@ -9,19 +9,13 @@
             <router-link to="./doc/Switch">组件1</router-link>
           </li>
           <li>
-            <router-link to="./doc/button2">组件2</router-link>
+            <router-link to="./doc/button">组件2</router-link>
           </li>
           <li>
-            <router-link to="./doc/button">组件3</router-link>
+            <router-link to="./doc/Dialog">组件3</router-link>
           </li>
           <li>
-            <router-link to="./doc/button2">组件4</router-link>
-          </li>
-          <li>
-            <router-link to="./doc/button">组件5</router-link>
-          </li>
-          <li>
-            <router-link to="./doc/button2">组件6</router-link>
+            <router-link to="./doc/Tabs">组件4</router-link>
           </li>
         </ol>
       </aside>
