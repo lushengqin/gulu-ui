@@ -1,9 +1,10 @@
 <template>
   <div>我是buttondemo</div>
   <div>
-    <Button @click="onClick" @mouseover="onClick" @focus="onClick">
-      我是buttonDemo里面的按钮
-    </Button>
+    <Button> 默认样式 </Button>
+    <Button theme="button"> 按钮样式 </Button>
+    <Button theme="link"> 链接样式</Button>
+    <Button theme="text"> 文本样式 </Button>
   </div>
 </template>
 <script>
