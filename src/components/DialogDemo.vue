@@ -1,23 +1,32 @@
 <template>
   <div>DialogDemo</div>
   <div>案例1</div>
-  <!-- <Dialog @click="toggle"></Dialog>
-  <Button v-model:visible="x">toggle</Button> -->
-  <Button @click="toggle">toggle</Button>
-  <!-- <Dialog :visible="x" @update:visible="x = $event"></Dialog> -->
-  <Dialog
-    v-model:visible="x"
-    :closeOnClickOverlay="false"
-    :ok="f1"
-    :cancel="f2"
-  >
-    <template v-slot:content>
-      <p>第一行字3</p>
-      <p>第二行字3</p>
-    </template>
-    <template v-slot:title> <strong>加粗的标题</strong> </template>
-  </Dialog>
-  <!-- <Dialog v-model:visible="x"></Dialog> -->
+  <div style="position: relative; z-index: 1">
+    <Button @click="toggle">toggle</Button>
+    <Dialog
+      v-model:visible="x"
+      :closeOnClickOverlay="false"
+      :ok="f1"
+      :cancel="f2"
+    >
+      <template v-slot:content>
+        <strong>hi</strong>
+        <div>hi2</div>
+      </template>
+      <template v-slot:title>
+        <strong>加粗的标题</strong>
+      </template>
+    </Dialog>
+  </div>
+  <div
+    style="
+      position: relative;
+      z-index: 2;
+      width: 300px;
+      height: 300px;
+      background: red;
+    "
+  ></div>
 </template>
 <script>
 import { ref } from "vue";
