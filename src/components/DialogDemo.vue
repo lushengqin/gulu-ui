@@ -10,7 +10,13 @@
     :closeOnClickOverlay="false"
     :ok="f1"
     :cancel="f2"
-  ></Dialog>
+  >
+    <template v-slot:content>
+      <p>第一行字3</p>
+      <p>第二行字3</p>
+    </template>
+    <template v-slot:title> <strong>加粗的标题</strong> </template>
+  </Dialog>
   <!-- <Dialog v-model:visible="x"></Dialog> -->
 </template>
 <script>
