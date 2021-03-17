@@ -11,12 +11,13 @@ a {
   text-decoration: none;
   color: inherit;
   &:hover {
-    border-bottom: 1px solid;
+    text-decoration: none;
     cursor: pointer;
   }
 }
 body {
-  font-size: 16px;
+  font-size: 16px; 
+  line-height: 1.5;
   // 为什么这样写 font-family
   // 答案见 https://github.com/zenozeng/fonts.css/
   
@@ -28,4 +29,12 @@ body {
 
 h1,h2,h3,h4,h5,h6{
   font-weight: normal;
+}
+
+
+.icon {
+  width: 1em; height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
 }

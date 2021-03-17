@@ -1,11 +1,26 @@
 <template>
   <div class="topnav">
-    <div class="logo">LOGO</div>
+    <router-link to="/" class="logo">
+      <svg class="icon">
+        <use xlink:href="#icon-lulu"></use>
+      </svg>
+    </router-link>
+
     <ul class="menu">
-      <li>菜单1</li>
-      <li>菜单2</li>
+      <li>
+        <router-link to="/doc">文档</router-link>
+      </li>
+      <li>
+        <a href="https://github.com/lushengqin" target="_blank">github</a>
+      </li>
     </ul>
-    <span class="toggleasside" @click="toggleMenu"></span>
+    <svg
+      v-if="toggleMenuButtonVisible"
+      class="toggleasside"
+      @click="toggleMenu"
+    >
+      <use xlink:href="#icon-gengduo"></use>
+    </svg>
   </div>
 </template>
 
@@ -13,6 +28,12 @@
 import { inject, Ref } from "vue";
 export default {
   name: "Topnav",
+  props: {
+    toggleMenuButtonVisible: {
+      type: Boolean,
+      default: false,
+    },
+  },
   setup() {
     const assideVisible = inject<Ref<boolean>>("assideVisible");
     console.log("topnav 里面获取到的为" + assideVisible.value);
@@ -26,7 +47,6 @@ export default {
 
 <style lang="scss" scoped>
 .topnav {
-  background: pink;
   display: flex;
   padding: 16px;
   position: relative;
@@ -36,6 +56,10 @@ export default {
   > .logo {
     max-width: 6em;
     margin-right: auto;
+    > svg {
+      width: 40px;
+      height: 40px;
+    }
   }
   > .menu {
     display: flex;
@@ -47,12 +71,11 @@ export default {
   }
   > .toggleasside {
     display: none;
-    width: 30px;
-    height: 30px;
-    background-color: gray;
+    width: 26px;
+    height: 26px;
     position: absolute;
     top: 50%;
-    left: 12px;
+    left: 20px;
     transform: translateY(-50%);
   }
   @media (max-width: 500px) {
