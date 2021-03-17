@@ -10,11 +10,16 @@
         :class="{ selected: t === selected }"
         @click="select(t)"
         v-for="(t, index) in titles"
+        :ref="
+          (el) => {
+            if (el) navItems[index] = el;
+          }
+        "
         :key="index"
       >
         {{ t }}
       </div>
-      <div class="gulu-tabs-nav-indicator"></div>
+      <div class="gulu-tabs-nav-indicator" ref="indicator"></div>
     </div>
     <div class="gulu-tabs-content">
       <component
@@ -28,6 +33,7 @@
   </div>
 </template>
 <script lang="ts">
+import { onMounted, ref } from "vue";
 import Tab from "./Tab.vue";
 export default {
   props: {
@@ -36,8 +42,20 @@ export default {
     },
   },
   setup(props, context) {
+    const navItems = ref<HTMLDivElement[]>([]);
+    const indicator = ref<HTMLDivElement>(null);
     // console.log({ ...context.slots.default() }); log技巧
     const defaults = context.slots.default();
+    onMounted(() => {
+      // console.log({ ...navItems.value });
+      const divs = navItems.value;
+      const result = divs.filter((div) =>
+        div.classList.contains("selected")
+      )[0];
+      console.log(result);
+      const { width } = result.getBoundingClientRect();
+      indicator.value.style.width = width + "px";
+    });
     defaults.forEach((tag) => {
       if (tag.type !== Tab) {
         throw new Error("Tabs 子标签必须是 Tab");
@@ -49,7 +67,7 @@ export default {
     const select = (title: String) => {
       context.emit("update:selected", title);
     };
-    return { defaults, titles, select };
+    return { defaults, titles, select, navItems, indicator };
   },
 };
 </script>
