@@ -4,7 +4,7 @@
     <component v-for="(c, index) in defaults" :is="c" :key="index" /> -->
   <!-- <component :is="defaults[1]" /> -->
   <div class="gulu-tabs">
-    <div class="gulu-tabs-nav">
+    <div class="gulu-tabs-nav" ref="containner">
       <div
         class="gulu-tabs-nav-item"
         :class="{ selected: t === selected }"
@@ -33,7 +33,7 @@
   </div>
 </template>
 <script lang="ts">
-import { onMounted, ref } from "vue";
+import { onMounted, onUpdated, ref } from "vue";
 import Tab from "./Tab.vue";
 export default {
   props: {
@@ -44,9 +44,10 @@ export default {
   setup(props, context) {
     const navItems = ref<HTMLDivElement[]>([]);
     const indicator = ref<HTMLDivElement>(null);
+    const containner = ref<HTMLDivElement>(null);
     // console.log({ ...context.slots.default() }); log技巧
     const defaults = context.slots.default();
-    onMounted(() => {
+    const x = () => {
       // console.log({ ...navItems.value });
       const divs = navItems.value;
       const result = divs.filter((div) =>
@@ -55,7 +56,13 @@ export default {
       console.log(result);
       const { width } = result.getBoundingClientRect();
       indicator.value.style.width = width + "px";
-    });
+      const { left: left1 } = containner.value.getBoundingClientRect();
+      const { left: left2 } = result.getBoundingClientRect();
+      const left = left2 - left1;
+      indicator.value.style.left = left + "px";
+    };
+    onMounted(x); //onMounted只在第一次渲染中执行
+    onUpdated(x); //onUpdated 更新时调用
     defaults.forEach((tag) => {
       if (tag.type !== Tab) {
         throw new Error("Tabs 子标签必须是 Tab");
@@ -67,7 +74,7 @@ export default {
     const select = (title: String) => {
       context.emit("update:selected", title);
     };
-    return { defaults, titles, select, navItems, indicator };
+    return { defaults, titles, select, navItems, indicator, containner };
   },
 };
 </script>
@@ -100,6 +107,7 @@ $border-color: #d9d9d9;
       left: 0;
       bottom: -1px;
       width: 100px;
+      transition: all 250ms;
     }
   }
 
