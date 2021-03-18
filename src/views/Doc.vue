@@ -6,29 +6,29 @@
         <h2>关于</h2>
         <ol>
           <li>
-            <router-link to="./doc/intro">介绍</router-link>
+            <router-link to="/doc/intro">介绍</router-link>
           </li>
           <li>
-            <router-link to="./doc/install">安装</router-link>
+            <router-link to="/doc/install">安装</router-link>
           </li>
           <li>
-            <router-link to="./doc/start">开始使用</router-link>
+            <router-link to="/doc/start">开始使用</router-link>
           </li>
         </ol>
 
         <h2>组件列表</h2>
         <ol>
           <li>
-            <router-link to="./doc/switch">组件1</router-link>
+            <router-link to="/doc/switch">组件1</router-link>
           </li>
           <li>
-            <router-link to="./doc/button">组件2</router-link>
+            <router-link to="/doc/button">组件2</router-link>
           </li>
           <li>
-            <router-link to="./doc/dialog">组件3</router-link>
+            <router-link to="/doc/dialog">组件3</router-link>
           </li>
           <li>
-            <router-link to="./doc/tabs">组件4</router-link>
+            <router-link to="/doc/tabs">组件4</router-link>
           </li>
         </ol>
       </aside>
@@ -75,7 +75,7 @@ $essential: #00877a;
   }
   > main {
     flex-grow: 1;
-    // padding: 16px;
+    padding-right: 20px;
   }
   aside {
     background: #f8f8f8;

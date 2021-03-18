@@ -22,25 +22,25 @@ export const router = createRouter({
                     path:'',component:ButtonDemo //默认页面写空 显示button内容
                 },
                 {
-                    path: '/intro', component: Intro
+                    path: 'intro', component: Intro
                 },
                 {
-                    path: '/install', component: Install    
+                    path: 'install', component: Install    
                 },
                 {
-                    path: '/start', component: Start
+                    path: 'start', component: Start
                 },
                 {
-                    path: '/switch', component: SwitchDemo
+                    path: 'switch', component: SwitchDemo
                 },
                 {
-                    path: '/button', component: ButtonDemo
+                    path: 'button', component: ButtonDemo
                 },
                 {
-                    path: '/dialog', component: DialogDemo  
+                    path: 'dialog', component: DialogDemo  
                 },
                 {
-                    path: '/tabs', component: TabsDemo
+                    path: 'tabs', component: TabsDemo
                 }
             ]
         }
