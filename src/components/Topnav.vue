@@ -48,7 +48,7 @@ export default {
 <style lang="scss" scoped>
 .topnav {
   display: flex;
-  padding: 16px;
+  padding: 16px 26px;
   position: relative;
   z-index: 10;
   justify-content: center;
@@ -76,6 +76,7 @@ export default {
     position: absolute;
     top: 50%;
     left: 20px;
+    z-index: 20;
     transform: translateY(-50%);
   }
   @media (max-width: 500px) {

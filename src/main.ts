@@ -1,11 +1,11 @@
-import './lib/gulu.scss'
-import './index.scss'
+import './lib/gulu.scss';
+import './index.scss';
 import { createApp } from 'vue'
 import App from './App.vue'
-import './views/iconfont.js'
+import './iconfont.js'
 
 import { router } from './router/router'
-
+import 'github-markdown-css'
 
 
 

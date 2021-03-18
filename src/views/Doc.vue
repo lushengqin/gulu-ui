@@ -3,19 +3,32 @@
     <topnav toggleMenuButtonVisible class="nav" />
     <div class="content">
       <aside v-if="assideVisible">
+        <h2>关于</h2>
+        <ol>
+          <li>
+            <router-link to="./doc/intro">介绍</router-link>
+          </li>
+          <li>
+            <router-link to="./doc/install">安装</router-link>
+          </li>
+          <li>
+            <router-link to="./doc/start">开始使用</router-link>
+          </li>
+        </ol>
+
         <h2>组件列表</h2>
         <ol>
           <li>
-            <router-link to="./doc/Switch">组件1</router-link>
+            <router-link to="./doc/switch">组件1</router-link>
           </li>
           <li>
             <router-link to="./doc/button">组件2</router-link>
           </li>
           <li>
-            <router-link to="./doc/Dialog">组件3</router-link>
+            <router-link to="./doc/dialog">组件3</router-link>
           </li>
           <li>
-            <router-link to="./doc/Tabs">组件4</router-link>
+            <router-link to="./doc/tabs">组件4</router-link>
           </li>
         </ol>
       </aside>
@@ -38,6 +51,7 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+$essential: #00877a;
 .layout {
   display: flex;
   flex-direction: column;
@@ -48,7 +62,7 @@ export default {
   > .content {
     flex-grow: 1;
     // padding-top: 60px;
-    padding-left: 156px;
+    padding-left: 260px;
     @media (max-width: 500px) {
       padding-left: 0;
     }
@@ -61,28 +75,39 @@ export default {
   }
   > main {
     flex-grow: 1;
-    padding: 16px;
+    // padding: 16px;
   }
-}
-aside {
-  background: #f8f8f8;
-  width: 150px;
-  padding: 16px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  padding-top: 70px;
-  height: 100%;
-  > h2 {
-    margin-bottom: 4px;
-  }
-  > ol {
-    > li {
-      padding: 4px 0;
+  aside {
+    background: #f8f8f8;
+    width: 240px;
+    // padding: 16px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 70px;
+    height: 100%;
+    z-index: 1;
+    > h2 {
+      margin-bottom: 4px;
+      padding: 8px 26px;
+    }
+    > ol {
+      > li {
+        > a {
+          padding: 0px 26px;
+          line-height: 40px;
+          color: $essential;
+          display: block;
+        }
+      }
+    }
+    main {
+      // overflow: auto;
+      border: 1px solid red;
     }
   }
-  main {
-    overflow: auto;
+  .router-link-exact-active {
+    background-color: rgba($color: #00877a, $alpha: 0.1);
   }
 }
 </style>

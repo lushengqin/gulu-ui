@@ -72,7 +72,7 @@ $radius: 4px;
     flex-wrap: wrap;
     > li {
       width: 400px;
-      margin: 16px 0;
+      margin: 26px 0;
       display: grid;
       justify-content: start;
       align-content: space-between;

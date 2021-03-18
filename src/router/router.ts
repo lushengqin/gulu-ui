@@ -6,6 +6,10 @@ import TabsDemo from '../components/TabsDemo.vue'
 import SwitchDemo from '../components/SwitchDemo.vue'
 import {createWebHashHistory,createRouter} from 'vue-router'
 
+import Intro from '../views/Intro.vue'
+import Install from '../views/Install.vue'
+import Start from '../views/Start.vue'
+
 const history = createWebHashHistory() 
 export const router = createRouter({ 
     history: history,
@@ -18,16 +22,25 @@ export const router = createRouter({
                     path:'',component:ButtonDemo //默认页面写空 显示button内容
                 },
                 {
+                    path: '/intro', component: Intro
+                },
+                {
+                    path: '/install', component: Install    
+                },
+                {
+                    path: '/start', component: Start
+                },
+                {
                     path: '/switch', component: SwitchDemo
                 },
                 {
                     path: '/button', component: ButtonDemo
                 },
                 {
-                    path: '/Dialog', component: DialogDemo  
+                    path: '/dialog', component: DialogDemo  
                 },
                 {
-                    path: '/Tabs', component: TabsDemo
+                    path: '/tabs', component: TabsDemo
                 }
             ]
         }
