@@ -1,34 +1,38 @@
 <template>
-  <!-- <div>我是switchDemo组件</div> -->
-  <!-- <Switch :value="y" @update:value="y = $event" /> -->
-  <!-- <Switch v-model:value="bool" /> -->
   <div>
     <h1>Switch 组件示例</h1>
     <div class="demo">
       <h2>常规用法</h2>
       <div class="demo-component">
         <component :is="Switch1Demo" />
-        <!-- <Switch1Demo v-model:value="bool" /> -->
       </div>
       <div class="demo-actions">
         <Button>查看代码</Button>
       </div>
       <div class="demo-code">
-        <pre>{{ Switch1Demo.__sourceCode }}</pre>
+        <pre
+          class="language-html"
+          v-html="
+            Prism.highlight(
+              Switch1Demo.__sourceCode,
+              Prism.languages.html,
+              'html'
+            )
+          "
+        />
       </div>
     </div>
     <div class="demo">
       <h2>支持 disabled</h2>
       <div class="demo-component">
-        <!-- <Switch2Demo v-model:value="bool" disabled /> -->
         <component :is="Switch2Demo" />
       </div>
       <div class="demo-actions">
         <Button>查看代码</Button>
       </div>
       <div class="demo-code">
-        <!-- <pre></pre> -->
         <pre
+          class="language-html"
           v-html="
             Prism.highlight(
               Switch2Demo.__sourceCode,
@@ -36,19 +40,17 @@
               'html'
             )
           "
-          class="language-css"
         />
       </div>
     </div>
   </div>
 </template>
-
 <script lang="ts">
 import "prismjs";
-console.log(window.Prism);
+
 // import "prismjs/themes/prism.css"; //引入css文件让代码高亮   这句话在这里引入 报错  改为css里面引入
+import "../../node_modules/prismjs/themes/prism.css"; //引入css文件让代码高亮   这句话在这里引入 报错  改为css里面引入错误 改成这个路径就对了
 const Prism = (window as any).Prism;
-console.log(Prism.xxx);
 import Switch1Demo from "./Switch1.demo.vue";
 import Switch2Demo from "./Switch2.demo.vue";
 import Button from "../lib/Button.vue";
@@ -69,9 +71,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-// @import "";
-// @import url(prismjs/themes/prism.css);
+<style lang="scss">
 $border-color: #d9d9d9;
 .demo {
   border: 1px solid $border-color;
