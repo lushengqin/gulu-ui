@@ -27,19 +27,32 @@
         <Button>查看代码</Button>
       </div>
       <div class="demo-code">
-        <pre>{{ Switch2Demo.__sourceCode }}</pre>
+        <!-- <pre></pre> -->
+        <pre
+          v-html="
+            Prism.highlight(
+              Switch2Demo.__sourceCode,
+              Prism.languages.html,
+              'html'
+            )
+          "
+          class="language-css"
+        />
       </div>
     </div>
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import "prismjs";
+console.log(window.Prism);
+// import "prismjs/themes/prism.css"; //引入css文件让代码高亮   这句话在这里引入 报错  改为css里面引入
+const Prism = (window as any).Prism;
+console.log(Prism.xxx);
 import Switch1Demo from "./Switch1.demo.vue";
 import Switch2Demo from "./Switch2.demo.vue";
 import Button from "../lib/Button.vue";
-import Switch from "../lib/Switch.vue";
 import { ref } from "vue";
-console.log(Switch1Demo);
 export default {
   components: {
     Button,
@@ -50,12 +63,15 @@ export default {
       bool,
       Switch1Demo,
       Switch2Demo,
+      Prism,
     };
   },
 };
 </script>
 
 <style lang="scss" scoped>
+// @import "";
+// @import url(prismjs/themes/prism.css);
 $border-color: #d9d9d9;
 .demo {
   border: 1px solid $border-color;
