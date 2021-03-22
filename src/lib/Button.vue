@@ -45,9 +45,10 @@ export default {
 </script>
 <style lang="scss">
 $h: 32px;
-$border-color: #d9d9d9;
-$color: #333;
-$blue: #40a9ff;
+$border-color: #eee;
+$color: #666;
+$blue: #00877a;
+$bj: #f4f4f4;
 $radius: 4px;
 $red: red;
 $grey: grey;
@@ -60,12 +61,15 @@ $grey: grey;
   justify-content: center;
   align-items: center;
   white-space: nowrap;
-  background: white;
+  background: $bj;
   color: $color;
   border: 1px solid $border-color;
   border-radius: $radius;
   box-shadow: 0 1px 0 fade-out(black, 0.95);
   transition: background 250ms;
+  margin-right: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   & + & {
     margin-left: 8px;
   }
@@ -91,7 +95,7 @@ $grey: grey;
   }
   &.gulu-size-big {
     font-size: 24px;
-    height: 48px;
+    height: 36px;
     padding: 0 16px;
   }
   &.gulu-size-small {

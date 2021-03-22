@@ -1,6 +1,6 @@
 <template>
-  <div>DialogDemo</div>
-  <div>案例1</div>
+  <h1>Dialog 组件示例</h1>
+  <!-- <div>案例1</div>
   <Button @click="toggle">toggle</Button>
   <Dialog
     v-model:visible="x"
@@ -15,43 +15,21 @@
     <template v-slot:title>
       <strong>加粗的标题</strong>
     </template>
-  </Dialog>
-
-  <div>案例2</div>
-  <Button @click="showDialog">show </Button>
+  </Dialog> -->
+  <Demo :component="Dialog1Demo" />
+  <Demo :component="Dialog2Demo" />
 </template>
 <script>
-import { ref, h } from "vue";
-import Button from "../lib/Button.vue";
-import Dialog from "../lib/Dialog.vue";
-import { openDialog } from "../lib/openDialog";
+import Demo from "./Demo.vue";
+import Dialog1Demo from "./Dialog/Dialog1.demo.vue";
+import Dialog2Demo from "./Dialog/Dialog2.demo.vue";
 export default {
-  components: { Dialog, Button },
+  components: { Demo },
   setup() {
-    const x = ref(false);
-    const toggle = () => {
-      x.value = !x.value;
+    return {
+      Dialog1Demo,
+      Dialog2Demo,
     };
-    const f1 = () => {
-      return false;
-    };
-    const f2 = () => {
-      return true;
-    };
-    const showDialog = () => {
-      openDialog({
-        title: h("strong", {}, "标题"),
-        content: "您好",
-        ok() {
-          console.log("ok");
-        },
-        cancel() {
-          props.cancel?.();
-          console.log("cancel");
-        },
-      });
-    };
-    return { x, toggle, f2, f1, showDialog };
   },
 };
 </script>
