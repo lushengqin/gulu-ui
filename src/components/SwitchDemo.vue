@@ -16,6 +16,7 @@ import Switch2Demo from "./Switch2.demo.vue";
 import Button from "../lib/Button.vue";
 import { ref } from "vue";
 
+// import Demo from "./Demo.vue";
 import Demo from "./Demo.vue";
 export default {
   components: {

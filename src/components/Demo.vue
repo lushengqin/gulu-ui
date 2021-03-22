@@ -5,15 +5,10 @@
       <component :is="component" />
     </div>
     <div class="demo-actions">
-      <Button>查看代码</Button>
+      <Button @click="codeVisible = !codeVisible">查看代码</Button>
     </div>
-    <div class="demo-code">
-      <pre
-        class="language-html"
-        v-html="
-          Prism.highlight(component.__sourceCode, Prism.languages.html, 'html')
-        "
-      />
+    <div class="demo-code" v-if="codeVisible">
+      <pre class="language-html" v-html="html" />
     </div>
   </div>
 </template>
@@ -21,6 +16,7 @@
 import "prismjs";
 import Button from "../lib/Button.vue";
 import "../../node_modules/prismjs/themes/prism-okaidia.css"; //引入css文件让代码高亮   这句话在这里引入 报错  改为css里面引入错误 改成这个路径就对了
+import { computed, ref } from "vue";
 const Prism = (window as any).Prism;
 console.log(Prism);
 export default {
@@ -30,9 +26,19 @@ export default {
   props: {
     component: Object,
   },
-  setup() {
+  setup(props) {
+    const html = computed(() => {
+      return Prism.highlight(
+        props.component.__sourceCode,
+        Prism.languages.html,
+        "html"
+      );
+    });
+    const codeVisible = ref(false);
     return {
       Prism,
+      html,
+      codeVisible,
     };
   },
 };
