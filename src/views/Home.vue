@@ -50,6 +50,7 @@ $essential: #00877a;
 $textessential: #006064;
 $radius: 4px;
 .topnavAndBanner {
+  // position: relative;
   background: linear-gradient(
     0deg,
     rgba(255, 255, 255, 1) 0%,
@@ -59,23 +60,29 @@ $radius: 4px;
   clip-path: ellipse(80% 60% at 50% 40%);
 }
 .features {
-  margin: 64px auto;
-  width: 400px;
+  margin: 40px 20px;
+  display: flex;
   @media (min-width: 800px) {
-    width: 800px;
-  }
-  @media (min-width: 1200px) {
-    width: 1200px;
+    // width: 800px;
+    justify-content: center;
+    ul {
+      flex-wrap: nowrap;
+
+      align-items: flex-start;
+      justify-content: center;
+      > li {
+        flex: 1;
+        justify-content: start;
+        align-content: space-between;
+      }
+    }
   }
   > ul {
     display: flex;
     flex-wrap: wrap;
     > li {
-      width: 400px;
-      margin: 26px 0;
+      padding: 30px 8px;
       display: grid;
-      justify-content: start;
-      align-content: space-between;
       grid-template-areas:
         "icon title"
         "icon text";
@@ -98,7 +105,7 @@ $radius: 4px;
 }
 
 .banner {
-  padding: 50px 0 80px;
+  padding: 100px 0 80px;
   display: flex;
   justify-content: center;
   align-items: center;

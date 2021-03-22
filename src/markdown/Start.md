@@ -24,4 +24,4 @@ import {Button, Tabs, Switch, Dialog} from "lulu-ui"
 </script>;
 ```
 
-下一节：[Tabs组件](#/doc/tabs)
+下一节：[Switch组件示例](#/doc/switch)

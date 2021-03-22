@@ -47,11 +47,13 @@ export default {
 $h: 32px;
 $border-color: #eee;
 $color: #666;
-$blue: #00877a;
+$blue: #26a599;
 $bj: #f4f4f4;
 $radius: 4px;
 $red: red;
 $grey: grey;
+$green: #1989fa;
+$orange: #ff976a;
 .gulu-button {
   box-sizing: border-box;
   height: $h;
@@ -70,9 +72,7 @@ $grey: grey;
   margin-right: 20px;
   margin-top: 10px;
   margin-bottom: 10px;
-  & + & {
-    margin-left: 8px;
-  }
+
   &:hover,
   &:focus {
     color: $blue;
@@ -114,6 +114,16 @@ $grey: grey;
         border-color: darken($blue, 10%);
       }
     }
+    &.gulu-level-minor {
+      background: $green;
+      color: white;
+      border-color: $green;
+      &:hover,
+      &:focus {
+        background: darken($green, 10%);
+        border-color: darken($green, 10%);
+      }
+    }
     &.gulu-level-danger {
       background: $red;
       border-color: $red;
@@ -122,6 +132,16 @@ $grey: grey;
       &:focus {
         background: darken($red, 10%);
         border-color: darken($red, 10%);
+      }
+    }
+    &.gulu-level-warn {
+      background: $orange;
+      border-color: $orange;
+      color: white;
+      &:hover,
+      &:focus {
+        background: darken($orange, 10%);
+        border-color: darken($orange, 10%);
       }
     }
   }
@@ -142,11 +162,25 @@ $grey: grey;
         color: darken($blue, 10%);
       }
     }
+    &.gulu-level-minor {
+      color: $green;
+      &:hover,
+      &:focus {
+        color: darken($green, 10%);
+      }
+    }
     &.gulu-level-danger {
       color: $red;
       &:hover,
       &:focus {
         color: darken($red, 10%);
+      }
+    }
+    &.gulu-level-warn {
+      color: $orange;
+      &:hover,
+      &:focus {
+        color: darken($orange, 10%);
       }
     }
   }

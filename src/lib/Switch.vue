@@ -24,6 +24,7 @@ export default {
 </script>
 
 <style lang="scss">
+$essential: #00877a;
 $h: 22px;
 $h2: $h - 4px;
 .gulu-switch {
@@ -44,7 +45,7 @@ $h2: $h - 4px;
     transition: all 500ms;
   }
   &.gulu-checked {
-    background: #1890ff;
+    background: $essential;
     span {
       left: calc(100% - #{$h2} - 2px);
     }

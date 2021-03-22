@@ -1,5 +1,5 @@
 <demo>
-函数式调用 只暴露出调用的api
+函数式调用
 </demo>
 <template>
   <div>
@@ -18,8 +18,8 @@ export default {
   setup() {
     const showDialog = () => {
       openDialog({
-        title: h("strong", {}, "只暴露出调用的api方式"),
-        content: "我是一键打开内容区",
+        title: h("strong", {}, "函数调用"),
+        content: "打开内容区",
         ok() {
           console.log("ok");
         },

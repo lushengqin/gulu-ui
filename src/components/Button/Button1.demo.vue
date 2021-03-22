@@ -1,13 +1,20 @@
 <demo>
-常规使用
+支持 level
 </demo>
 
 <template>
   <div>
-    <Button> 默认样式 </Button>
-    <Button theme="link"> 链接样式</Button>
-    <Button theme="text"> 文本样式 </Button>
+    <Button level="main">主要按钮</Button>
+    <Button level="minor">次要按钮</Button>
+    <Button>普通按钮</Button>
+    <Button level="danger">危险按钮</Button>
+    <Button level="warn">警告按钮</Button>
   </div>
+  <!-- <div>
+    <Button theme="text" level="main">主要文字按钮</Button>
+    <Button theme="text">普通文字按钮</Button>
+    <Button theme="text" level="danger">危险文字按钮</Button>
+  </div> -->
 </template>
 
 <script>

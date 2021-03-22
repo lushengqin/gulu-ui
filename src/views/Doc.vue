@@ -60,8 +60,8 @@ $essential: #00877a;
     flex-shrink: 0;
   }
   > .content {
+    padding-top: 80px;
     flex-grow: 1;
-    // padding-top: 60px;
     padding-left: 240px;
     @media (max-width: 500px) {
       padding-left: 0;
@@ -85,7 +85,7 @@ $essential: #00877a;
     position: fixed;
     top: 0;
     left: 0;
-    padding-top: 70px;
+    padding-top: 90px;
     height: 100%;
     z-index: 1;
     > h2 {

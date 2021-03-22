@@ -49,10 +49,14 @@ export default {
 .topnav {
   display: flex;
   padding: 16px 26px;
-  position: relative;
   z-index: 10;
   justify-content: center;
   align-items: center;
+  position: fixed;
+  width: 100vw;
+  background-color: #fff;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.07);
+  -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.07);
   > .logo {
     max-width: 6em;
     margin-right: auto;
