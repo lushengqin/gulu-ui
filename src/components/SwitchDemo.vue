@@ -6,30 +6,18 @@
   </div>
 </template>
 <script lang="ts">
-import "prismjs";
-
-// import "prismjs/themes/prism.css"; //引入css文件让代码高亮   这句话在这里引入 报错  改为css里面引入
-import "../../node_modules/prismjs/themes/prism-okaidia.css"; //引入css文件让代码高亮   这句话在这里引入 报错  改为css里面引入错误 改成这个路径就对了
-const Prism = (window as any).Prism;
 import Switch1Demo from "./Switch1.demo.vue";
 import Switch2Demo from "./Switch2.demo.vue";
-import Button from "../lib/Button.vue";
 import { ref } from "vue";
-
-// import Demo from "./Demo.vue";
 import Demo from "./Demo.vue";
 export default {
   components: {
-    Button,
     Demo,
   },
   setup() {
-    const bool = ref(false);
     return {
-      bool,
       Switch1Demo,
       Switch2Demo,
-      Prism,
     };
   },
 };
