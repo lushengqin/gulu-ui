@@ -8,4 +8,4 @@ git branch -M main &&
 git remote add origin git@github.com:lushengqin/lulu-UI.git &&
 git push -f -u origin main &&
 cd -
-echo https://lushengqin.github.io/lulu-UI/index.html
+echo https://lushengqin.github.io/lulu-UI/index.html 000

@@ -5,7 +5,8 @@
       <component :is="component" />
     </div>
     <div class="demo-actions">
-      <Button @click="codeVisible = !codeVisible">查看代码</Button>
+      <Button @click="hideCode" v-if="codeVisible">隐藏代码</Button>
+      <Button @click="showCode" v-else>查看代码</Button>
     </div>
     <div class="demo-code" v-if="codeVisible">
       <pre class="language-html" v-html="html" />
@@ -15,7 +16,7 @@
 <script lang="ts">
 import "prismjs";
 import Button from "../lib/Button.vue";
-import "../../node_modules/prismjs/themes/prism-okaidia.css"; //引入css文件让代码高亮   这句话在这里引入 报错  改为css里面引入错误 改成这个路径就对了
+import "../../node_modules/prismjs/themes/prism-tomorrow.css"; //引入css文件让代码高亮   这句话在这里引入 报错  改为css里面引入错误 改成这个路径就对了
 import { computed, ref } from "vue";
 const Prism = (window as any).Prism;
 console.log(Prism);
@@ -34,11 +35,19 @@ export default {
         "html"
       );
     });
+    const showCode = () => {
+      codeVisible.value = true;
+    };
+    const hideCode = () => {
+      codeVisible.value = false;
+    };
     const codeVisible = ref(false);
     return {
       Prism,
       html,
       codeVisible,
+      showCode,
+      hideCode,
     };
   },
 };
@@ -65,9 +74,14 @@ $border-color: #d9d9d9;
     padding: 8px 16px;
     border-top: 1px dashed $border-color;
     > pre {
+      width: 80vw;
       line-height: 1.1;
       font-family: Consolas, "Courier New", Courier, monospace;
-      margin: 0;
+      overflow-x: auto;
+      // margin: 0;
+      @media (min-width: 800px) {
+        width: 100%;
+      }
     }
   }
 }
