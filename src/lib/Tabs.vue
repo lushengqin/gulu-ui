@@ -1,8 +1,4 @@
 <template>
-  <!-- <div> -->
-  <!-- <div v-for="(t, index) in titles" :key="index">{{ t }}</div>
-    <component v-for="(c, index) in defaults" :is="c" :key="index" /> -->
-  <!-- <component :is="defaults[1]" /> -->
   <div class="gulu-tabs">
     <div class="gulu-tabs-nav" ref="containner">
       <div

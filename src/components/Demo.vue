@@ -16,6 +16,7 @@
 <script lang="ts">
 import "prismjs";
 import Button from "../lib/Button.vue";
+// import "prismjs/themes/prism.css";
 import "../../node_modules/prismjs/themes/prism-tomorrow.css"; //引入css文件让代码高亮   这句话在这里引入 报错  改为css里面引入错误 改成这个路径就对了
 import { computed, ref } from "vue";
 const Prism = (window as any).Prism;

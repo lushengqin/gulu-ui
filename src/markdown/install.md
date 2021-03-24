@@ -3,13 +3,13 @@
 打开终端运行下列命令：
 
 ```
-npm install lulu-ui
+npm install xiaolu-ui
 ```
 
 或
 
 ```
-yarn add lulu-ui
+yarn add xiaolu-ui
 ```
 
 下一节：[开始使用](#/doc/start)
