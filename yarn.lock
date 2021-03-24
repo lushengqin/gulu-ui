@@ -1221,10 +1221,10 @@ jest-worker@^26.2.1:
     merge-stream "^2.0.0"
     supports-color "^7.0.0"
 
-joycon@^3.0.0:
-  version "3.0.1"
-  resolved "https://registry.npm.taobao.org/joycon/download/joycon-3.0.1.tgz#9074c9b08ccf37a6726ff74a18485f85efcaddaf"
-  integrity sha1-kHTJsIzPN6Zyb/dKGEhfhe/K3a8=
+joycon@^2.2.5:
+  version "2.2.5"
+  resolved "https://registry.npmjs.org/joycon/-/joycon-2.2.5.tgz#8d4cf4cbb2544d7b7583c216fcdfec19f6be1615"
+  integrity sha512-YqvUxoOcVPnCp0VU1/56f+iKSdvIRJYPznH22BdXV3xMk75SFXhWeJkZ8C9XxUWt1b5x2X1SxuFygW1U0FmkEQ==
 
 js-tokens@^4.0.0:
   version "4.0.0"
@@ -1242,11 +1242,6 @@ json5@^1.0.1:
   integrity sha1-d5+wAYYE+oVOrL9iUhgNg1Q+Pb4=
   dependencies:
     minimist "^1.2.0"
-
-jsonc-parser@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.npm.taobao.org/jsonc-parser/download/jsonc-parser-3.0.0.tgz?cache=0&sync_timestamp=1605282527742&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fjsonc-parser%2Fdownload%2Fjsonc-parser-3.0.0.tgz#abdd785701c7e7eaca8a9ec8cf070ca51a745a22"
-  integrity sha1-q914VwHH5+rKip7IzwcMpRp0WiI=
 
 jsonfile@^6.0.1:
   version "6.1.0"
@@ -1408,10 +1403,10 @@ magic-string@^0.25.7:
   dependencies:
     sourcemap-codec "^1.4.4"
 
-marked@^2.0.1:
-  version "2.0.1"
-  resolved "https://registry.npm.taobao.org/marked/download/marked-2.0.1.tgz?cache=0&sync_timestamp=1614405261058&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fmarked%2Fdownload%2Fmarked-2.0.1.tgz#5e7ed7009bfa5c95182e4eb696f85e948cefcee3"
-  integrity sha1-Xn7XAJv6XJUYLk62lvhelIzvzuM=
+marked@^1.1.1:
+  version "1.2.9"
+  resolved "https://registry.npmjs.org/marked/-/marked-1.2.9.tgz#53786f8b05d4c01a2a5a76b7d1ec9943d29d72dc"
+  integrity sha512-H8lIX2SvyitGX+TRdtS06m1jHMijKN/XjfH6Ooii9fvxMlh8QdqBfBDkGUpMWH2kQNrtixjzYUa3SH8ROTgRRw==
 
 media-typer@0.3.0:
   version "0.3.0"
@@ -1747,10 +1742,10 @@ postcss@^8.1.10:
     nanoid "^3.1.20"
     source-map "^0.6.1"
 
-prismjs@^1.23.0:
+prismjs@^1.21.0:
   version "1.23.0"
-  resolved "https://registry.npm.taobao.org/prismjs/download/prismjs-1.23.0.tgz?cache=0&sync_timestamp=1609438547304&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fprismjs%2Fdownload%2Fprismjs-1.23.0.tgz#d3b3967f7d72440690497652a9d40ff046067f33"
-  integrity sha1-07OWf31yRAaQSXZSqdQP8EYGfzM=
+  resolved "https://registry.npmjs.org/prismjs/-/prismjs-1.23.0.tgz#d3b3967f7d72440690497652a9d40ff046067f33"
+  integrity sha512-c29LVsqOaLbBHuIbsTxaKENh1N2EQBOHaWv7gkHN4dgRbxSREqDnDbtFJYdpPauS4YCplMSNCABQ6Eeor69bAA==
   optionalDependencies:
     clipboard "^2.0.0"
 
@@ -1851,16 +1846,16 @@ rollup-plugin-dynamic-import-variables@^1.1.0:
     globby "^11.0.0"
     magic-string "^0.25.7"
 
-rollup-plugin-esbuild@^3.0.2:
-  version "3.0.2"
-  resolved "https://registry.npmjs.org/rollup-plugin-esbuild/-/rollup-plugin-esbuild-3.0.2.tgz#85a1afd59510ef143813b46f515e92a49779a60b"
-  integrity sha512-uq+oBCeLXF1m6g9V0qpqbPbgyq24aXBKF474BvqgxfNmTP6FZ+oVk5/pCWQ/2rfSNJs4IimNU/k0q8xMaa0iCA==
+rollup-plugin-esbuild@^2.5.0:
+  version "2.6.1"
+  resolved "https://registry.npmjs.org/rollup-plugin-esbuild/-/rollup-plugin-esbuild-2.6.1.tgz#5785532940d49adf1bff5b38e9bd9089262d4e7a"
+  integrity sha512-hskMEQQ4Vxlyoeg1OWlFTwWHIhpNaw6q+diOT7p9pdkk34m9Mbk3aymS/JbTqLXy/AbJi22iuXrucknKpeczfg==
   dependencies:
     "@rollup/pluginutils" "^4.1.0"
-    joycon "^3.0.0"
-    jsonc-parser "^3.0.0"
+    joycon "^2.2.5"
+    strip-json-comments "^3.1.1"
 
-rollup-plugin-scss@^2.6.1:
+rollup-plugin-scss@^2.6.0:
   version "2.6.1"
   resolved "https://registry.npmjs.org/rollup-plugin-scss/-/rollup-plugin-scss-2.6.1.tgz#22826b4499f511aaf2edb8420faaf04a42e24a33"
   integrity sha512-IWREkMDJLJbS3aa1aakYYdJc3yPUb4BBrmK8hgThmtr7hWevBvCZ3b0SXm/Tgx53RxV9q1Btf4hD7nczJiDsfw==
@@ -1879,7 +1874,16 @@ rollup-plugin-terser@^7.0.2:
     serialize-javascript "^4.0.0"
     terser "^5.0.0"
 
-rollup-plugin-vue@^6.0.0, rollup-plugin-vue@^6.0.0-beta.10:
+rollup-plugin-vue@6.0.0-beta.10:
+  version "6.0.0-beta.10"
+  resolved "https://registry.npmjs.org/rollup-plugin-vue/-/rollup-plugin-vue-6.0.0-beta.10.tgz#66d9b9a8dd2d085267d1cc398ea0113360879ac1"
+  integrity sha512-8TZJmROiSRjWoHRR6id0/ktOBOUGuI302xDBq4YBiA/tnnXdoY3oFGtvRWzT5ldX0jTJ8QX40rrJOw2SvcWwxQ==
+  dependencies:
+    debug "^4.1.1"
+    hash-sum "^2.0.0"
+    rollup-pluginutils "^2.8.2"
+
+rollup-plugin-vue@^6.0.0:
   version "6.0.0"
   resolved "https://registry.npmjs.org/rollup-plugin-vue/-/rollup-plugin-vue-6.0.0.tgz#e379e93e5ae9a8648522f698be2e452e8672aaf2"
   integrity sha512-oVvUd84d5u73M2HYM3XsMDLtZRIA/tw2U0dmHlXU2UWP5JARYHzh/U9vcxaN/x/9MrepY7VH3pHFeOhrWpxs/Q==
@@ -1924,7 +1928,7 @@ safe-buffer@^5.1.0, safe-buffer@~5.2.0:
   resolved "https://registry.npm.taobao.org/safe-buffer/download/safe-buffer-5.2.1.tgz#1eaf9fa9bdb1fdd4ec75f58f9cdb4e6b7827eec6"
   integrity sha1-Hq+fqb2x/dTsdfWPnNtOa3gn7sY=
 
-sass@^1.32.8:
+sass@^1.26.11:
   version "1.32.8"
   resolved "https://registry.npmjs.org/sass/-/sass-1.32.8.tgz#f16a9abd8dc530add8834e506878a2808c037bdc"
   integrity sha512-Sl6mIeGpzjIUZqvKnKETfMf0iDAswD9TNlv13A7aAF3XZlRPMq4VvJWBC2N2DXbp94MQVdNSFG6LfF/iOXrPHQ==
@@ -2038,6 +2042,11 @@ strip-final-newline@^2.0.0:
   version "2.0.0"
   resolved "https://registry.npm.taobao.org/strip-final-newline/download/strip-final-newline-2.0.0.tgz#89b852fb2fcbe936f6f4b3187afb0a12c1ab58ad"
   integrity sha1-ibhS+y/L6Tb29LMYevsKEsGrWK0=
+
+strip-json-comments@^3.1.1:
+  version "3.1.1"
+  resolved "https://registry.npmjs.org/strip-json-comments/-/strip-json-comments-3.1.1.tgz#31f1281b3832630434831c310c01cccda8cbe006"
+  integrity sha512-6fPc+R4ihwqP6N/aIv2f1gMH8lOVtWQHoqC4yK6oSDVVocumAsfCqjkXnqiYMhmMwS/mEHLp7Vehlt3ql6lEig==
 
 supports-color@^5.3.0:
   version "5.5.0"
@@ -2185,10 +2194,10 @@ vite@^1.0.0-rc.1:
     vue "^3.0.3"
     ws "^7.3.1"
 
-vue-router@4.0.4:
-  version "4.0.4"
-  resolved "https://registry.npm.taobao.org/vue-router/download/vue-router-4.0.4.tgz?cache=0&sync_timestamp=1615477493682&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fvue-router%2Fdownload%2Fvue-router-4.0.4.tgz#ad9b4b7bbdad622407b4ff189b1646f48c1e9053"
-  integrity sha1-rZtLe72tYiQHtP8YmxZG9IwekFM=
+vue-router@4.0.0-beta.3:
+  version "4.0.0-beta.3"
+  resolved "https://registry.npmjs.org/vue-router/-/vue-router-4.0.0-beta.3.tgz#e46f45807023a4b8ce73a143a216b4c9ea3eb243"
+  integrity sha512-3/cg3n46D9MO9u2nvtGE38gMyUxg8sjt6jMeZ6zbi9sRGAL0PaDHuKS+xWlOOLit7abP5MepNlh84t41gxtP8Q==
 
 vue@^3.0.0-rc.1, vue@^3.0.3:
   version "3.0.7"
