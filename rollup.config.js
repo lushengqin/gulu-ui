@@ -12,13 +12,13 @@ export default {
     globals: {
       vue: 'Vue'
     },
-    name: 'Gulu',
-    file: 'dist/lib/gulu.js',
+    name: 'xiaolu-ui',
+    file: 'dist/lib/xiaolu-ui.js',
     format: 'umd',
     plugins: [terser()]
   }, {
-    name: 'Gulu',
-    file: 'dist/lib/gulu.esm.js',
+    name: 'xiaolu-ui',
+    file: 'dist/lib/xiaolu-ui.esm.js',
     format: 'es',
     plugins: [terser()]
   }],
