@@ -10,7 +10,7 @@ export default {
     globals: {
       vue: 'Vue'
     },
-    name: 'Xiaolu-ui',
+    name: 'xiaolu-ui',
     file: 'dist/lib/xiaolu-ui.js',
     format: 'umd',
     plugins: [terser()]
